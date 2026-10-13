@@ -81,7 +81,10 @@ export default function ItemsPage() {
         {filtered.map((item) => (
           <li key={item.id} className="flex items-center gap-4 py-3">
             <span className="font-mono text-sm text-gray-500">{item.reference}</span>
-            <span className="font-medium">{item.name}</span>
+            <a href={`/items/${item.reference}`} className="font-medium hover:underline">
+             {item.name}
+            </a>
+
             <span className="text-sm text-gray-500">{item.category}</span>
             <span className="ml-auto text-sm">{item.state}</span>
           </li>
